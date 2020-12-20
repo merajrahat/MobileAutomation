@@ -19,6 +19,9 @@ public class ProductPage {
     @FindBy(xpath = "//android.widget.TextView[@text='Checking Accounts']")
     private WebElement clickOnCheckingAccount;
 
+    @FindBy(xpath = "//android.widget.Button[@text='Learn more']")
+    private WebElement clickOnCheckingAccountPage;
+
     public void clickProductBtn() {
         clickOnProduct.click();
     }
@@ -34,10 +37,16 @@ public class ProductPage {
     public void productPageDisplay() {
         Assert.assertTrue(clickOnCheckingAccount.isDisplayed());
         ExtentTestManager.log("scrolled down");
+        ExtentTestManager.log("scrolled up");
     }
 
     public void clickCheckingAccount() {
         clickOnCheckingAccount.click();
+        ExtentTestManager.log("clicked on Checking Accounts");
     }
 
+    public void clickOnCheckingAccountPage() {
+        Assert.assertTrue(clickOnCheckingAccountPage.isDisplayed());
+        ExtentTestManager.log("Checking Page validated");
+    }
 }

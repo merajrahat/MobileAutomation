@@ -51,9 +51,14 @@ public class RegressionTests extends TestBase {
 
         functionSwipe("up", 200, 500);
         sleepFor(2);
-        functionSwipe("up", 200, 500);
+        functionSwipe("down", 200, 500);
         sleepFor(2);
         ExtentTestManager.captureScreenshot(getDriver(), "validateUserBeingAbleToScrollOnProductPage.png");
+        sleepFor(2);
+        productPage.clickCheckingAccount();
+        sleepFor(2);
+        productPage.clickOnCheckingAccountPage();
+        sleepFor(2);
 
     }
 
