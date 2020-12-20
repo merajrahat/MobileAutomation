@@ -1,5 +1,6 @@
 package android.pages;
 
+import com.pnt.mobileautomation.ExtentTestManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -20,27 +21,39 @@ public class HomePage {
     @FindBy(xpath = "//android.widget.Button[@text='PAY A BILL']")
     private WebElement payABillBtn;
 
+    @FindBy(xpath = "//android.widget.TextView[@text='Products']")
+    private WebElement clickOnProduct;
 
 
-    public void clickOnAccountsButton(){
+    public void clickOnAccountsButton() {
         accountBtn.click();
 
     }
-    public void clickOnTransferButton(){
+
+    public void clickOnTransferButton() {
         transferBtn.click();
 
     }
-    public void clickOnDepositBtton(){
+
+    public void clickOnDepositBtton() {
         depositBtn.click();
 
     }
-    public void clickOnSendMoneyButton(){
+
+    public void clickOnSendMoneyButton() {
         sendMondyBtn.click();
 
     }
-    public void clickOnPayAbillButton(){
+
+    public void clickOnPayAbillButton() {
         payABillBtn.click();
 
     }
+
+    public void clickProductBtn() {
+        clickOnProduct.click();
+        ExtentTestManager.log("clicked on product");
+    }
+
 
 }

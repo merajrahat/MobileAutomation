@@ -5,11 +5,11 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
 
-        @FindBy(xpath = "//android.widget.ImageButton[@content-desc=\"Go Back\"]")
-        private WebElement backBtn;
+    @FindBy(xpath = "//android.widget.ImageButton[@content-desc=\"Go Back\"]")
+    private WebElement backBtn;
 
-        public void clickOnBackButton(){
-            backBtn.click();
+    public void clickOnBackButton() {
+        backBtn.click();
 
-        }
+    }
 }

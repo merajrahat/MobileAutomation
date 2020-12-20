@@ -1,7 +1,9 @@
 package android.pages;
 
+import com.pnt.mobileautomation.ExtentTestManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class ProductPage {
 
@@ -14,16 +16,28 @@ public class ProductPage {
     @FindBy(xpath = "//android.widget.TextView[@text='Personal Loans']")
     private WebElement clickOnPersonalLoans;
 
-    public void clickProductBtn(){
+    @FindBy(xpath = "//android.widget.TextView[@text='Checking Accounts']")
+    private WebElement clickOnCheckingAccount;
+
+    public void clickProductBtn() {
         clickOnProduct.click();
     }
 
-    public void clickMortageBtn(){
+    public void clickMortageBtn() {
         clickOnMortgage.click();
     }
 
-    public void clickPersonalLoansBtn(){
+    public void clickPersonalLoansBtn() {
         clickOnPersonalLoans.click();
+    }
+
+    public void productPageDisplay() {
+        Assert.assertTrue(clickOnCheckingAccount.isDisplayed());
+        ExtentTestManager.log("scrolled down");
+    }
+
+    public void clickCheckingAccount() {
+        clickOnCheckingAccount.click();
     }
 
 }
