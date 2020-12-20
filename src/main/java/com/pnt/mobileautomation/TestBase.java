@@ -46,6 +46,9 @@ public class TestBase {
             desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
             desiredCapabilities.setCapability(MobileCapabilityType.APP_PACKAGE, appPackage);
             desiredCapabilities.setCapability(MobileCapabilityType.APP_ACTIVITY, appActivity);
+
+            //bottom line is if you don't have the app, it will install the app first then run it
+            //desiredCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir"));
             driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), desiredCapabilities);
         }
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
