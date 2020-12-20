@@ -59,6 +59,8 @@ public class RegressionTests extends TestBase {
         sleepFor(2);
         productPage.clickOnCheckingAccountPage();
         sleepFor(2);
+        ExtentTestManager.captureScreenshot(getDriver(), "validateUserBeingAbleToGoToCheckingAccountsPage.png");
+        sleepFor(2);
 
     }
 
