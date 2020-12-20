@@ -26,7 +26,7 @@ public class AppiumAndroid {
         cap.setCapability(MobileCapabilityType.APP_ACTIVITY, "com.td.dcts.android.us.app.SplashScreenActivity");
         //cap.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/src/main/resources/TD.apk");
 
-        AppiumDriver appiumDriver = new AndroidDriver(new URL("http://localhost:4724/wd/hub"), cap);
+        AppiumDriver appiumDriver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), cap);
 
         appiumDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
