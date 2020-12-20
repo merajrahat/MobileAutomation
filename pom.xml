@@ -30,7 +30,7 @@
                 <version>3.0.0-M3</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFiles>src/test/resources/EbayRunner.xml</suiteXmlFiles>
+                        <suiteXmlFiles>src/test/java/android/Runner.xml</suiteXmlFiles>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

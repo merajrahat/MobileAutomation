@@ -29,7 +29,7 @@ import java.util.Map;
 
         //screenshot
         public static String captureScreenshot(WebDriver driver, String screenshotName) {
-            DateFormat df = new SimpleDateFormat("(MM.dd.yyyy-HH:mma)");
+            DateFormat df = new SimpleDateFormat("(MM.dd.yyyy-HH_mma)");
             Date date = new Date();
             df.format(date);
             String destination = null;
@@ -76,7 +76,7 @@ import java.util.Map;
 
         protected synchronized static ExtentReports getInstance() {
             Calendar cal = Calendar.getInstance();
-            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+            SimpleDateFormat sdf = new SimpleDateFormat("HH_mm_ss");
             String date = sdf.format(cal.getTime());
 
             if (extent == null) {
@@ -92,6 +92,7 @@ import java.util.Map;
         }
 
         protected static void setOutputDirectory(ITestContext context) {
+
             ExtentTestManager.context = context;
         }
 
