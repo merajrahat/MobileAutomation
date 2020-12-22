@@ -45,6 +45,7 @@ public class RegressionTests extends TestBase {
     public void validateUserBeingAbleToScrollOnProductPage() {
         HomePage homePage = PageFactory.initElements(getDriver(), HomePage.class);
         ProductPage productPage = PageFactory.initElements(getDriver(), ProductPage.class);
+        LoginPage loginPage = PageFactory.initElements(getDriver(), LoginPage.class);
         homePage.clickProductBtn();
         productPage.productPageDisplay();
         sleepFor(2);
@@ -60,6 +61,8 @@ public class RegressionTests extends TestBase {
         productPage.clickOnCheckingAccountPage();
         sleepFor(2);
         ExtentTestManager.captureScreenshot(getDriver(), "validateUserBeingAbleToGoToCheckingAccountsPage.png");
+        sleepFor(2);
+        loginPage.clickOnBackButton();
         sleepFor(2);
 
     }
